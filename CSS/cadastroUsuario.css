@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#cadastroFuncionarioContainer {
+    background-color: #ffffff;
+    width: 600px;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Espaçamento entre os grupos de campos */
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.two-column {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Espaçamento horizontal entre os campos */
+}
+
+.two-column .form-group {
+    flex: 1;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #333;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px; /* Espaçamento acima do botão */
+    justify-content: center;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+.login-Usuario {
+    text-align: center;
+    margin-top: 10px;
+}
+
+a {
+    margin: 5px;
+}

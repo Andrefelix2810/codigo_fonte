@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Alterar Usuário</title>
+</head>
+<body>
+    <h1>Alterar Usuário</h1>
+    <form id="formAlterarUsuario">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+ 
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" required><br><br>
+ 
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha"><br><br>
+ 
+        <label for="senhaConfirmacao">Confirmar Senha:</label>
+        <input type="password" id="senhaConfirmacao" name="senhaConfirmacao"><br><br>
+ 
+        <label for="grupo">Grupo:</label>
+        <select id="grupo" name="grupo">
+            <option value="admin">Admin</option>
+            <option value="estoquista">Estoquista</option>
+        </select><br><br>
+ 
+        <button type="submit">Alterar</button>
+    </form>
+ 
+    <script src="./codigo_fonte/JS/alterarUsuario.js">
+    </script>
+</body>
+</html>

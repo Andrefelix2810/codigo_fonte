@@ -1,0 +1,292 @@
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 0 10px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    right: 10px;
+    height: 4px;
+    background-color: #e0e0e0;
+    z-index: 0;
+    border-radius: 2px;
+}
+
+.timeline-step {
+    position: relative;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    z-index: 1;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.timeline-step.active {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
+
+.timeline-step.completed {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff;
+}
+
+.timeline-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -1000%;
+    width: calc(100% + 20px); /* Ajuste para evitar sobreposição */
+    height: 4px;
+    background-color: #e0e0e0;
+    z-index: -1;
+    border-radius: 2px;
+}
+
+.timeline-step:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: #fff;
+}
+
+#enderecos-entrega {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#enderecos-entrega h3 {
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+#enderecos-entrega p {
+    margin: 5px 0;
+}
+
+#enderecos-entrega label {
+    font-weight: bold;
+}
+
+#enderecos-entrega input[type="radio"] {
+    margin-right: 10px;
+}
+#formaPagamento {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#formaPagamento h3 {
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+#formaPagamento .form-check {
+    margin-bottom: 10px;
+}
+
+#formaPagamento .form-check-label {
+    font-weight: bold;
+}
+
+#formaPagamento #dadosCartao {
+    margin-top: 20px;
+}
+
+#formaPagamento #dadosCartao .form-label {
+    font-weight: bold;
+}
+
+#formaPagamento #dadosCartao .form-control {
+    margin-bottom: 10px;
+}
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 190px;
+    perspective: 1000px;
+    color: white;
+    margin: 20px auto;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+}
+
+.flip-card-front {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 2px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+    background-color: #171717;
+}
+
+.flip-card-back {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 2px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -1px 0px inset;
+    background-color: #171717;
+    transform: rotateY(180deg);
+}
+
+.heading_8264 {
+    position: absolute;
+    letter-spacing: .2em;
+    font-size: 0.8em;
+    top: 10px;
+    left: 20px;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.chip {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+}
+
+.contactless {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+}
+
+.number {
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.2em;
+    top: 90px;
+    left: 20px;
+}
+
+.valid_thru {
+    position: absolute;
+    font-weight: bold;
+    font-size: 0.8em;
+    top: 130px;
+    left: 20px;
+}
+
+.date_8264 {
+    position: absolute;
+    font-weight: bold;
+    font-size: 0.8em;
+    top: 130px;
+    left: 100px;
+}
+
+.name {
+    position: absolute;
+    font-weight: bold;
+    font-size: 1em;
+    top: 150px;
+    left: 20px;
+}
+
+.strip {
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 40px;
+    top: 20px;
+    background: repeating-linear-gradient(
+      45deg,
+      #303030,
+      #303030 10px,
+      #202020 10px,
+      #202020 20px
+    );
+}
+
+.mstrip {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 60%;
+    height: 20px;
+    top: 80px;
+    left: 10px;
+    border-radius: 2.5px;
+}
+
+.sstrip {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 30%;
+    height: 20px;
+    top: 80px;
+    right: 10px;
+    border-radius: 2.5px;
+}
+
+.code {
+    font-weight: bold;
+    text-align: center;
+    margin: .2em;
+    color: black;
+}
+#resumoPedido {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#resumoPedido h3 {
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+#resumoPedido h4 {
+    margin-top: 20px;
+    color: #343a40;
+}
+
+#resumoPedido p {
+    margin: 5px 0;
+    color: #495057;
+}
+
+#resumoPedido .btn {
+    margin-top: 20px;
+}

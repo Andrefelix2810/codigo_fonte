@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/alterarCliente.css">
+    <title>Alterar Dados do Cliente</title>
+</head>
+<body>
+    <h1>Alterar Dados do Cliente</h1>
+    <form id="form-alterar-cliente">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome"><br>
+
+        <label for="dataNascimento">Data de Nascimento:</label>
+        <input type="date" id="dataNascimento" name="dataNascimento"><br>
+
+        <label for="genero">Gênero:</label>
+        <input type="text" id="genero" name="genero"><br>
+
+        <label for="novaSenha">Nova Senha:</label>
+        <input type="password" id="novaSenha" name="novaSenha"><br>
+
+        <label for="confirmarSenha">Confirmar Nova Senha:</label>
+        <input type="password" id="confirmarSenha" name="confirmarSenha"><br>
+
+        <label for="email">Email:</label>
+        <span id="email"></span><br>
+
+        <label for="cpf">CPF:</label>
+        <span id="cpf"></span><br>
+
+        <label for="cep">CEP:</label>
+        <span id="cep"></span><br>
+
+        <label for="logradouro">Logradouro:</label>
+        <span id="logradouro"></span><br>
+
+        <label for="numero">Número:</label>
+        <span id="numero"></span><br>
+
+        <label for="complemento">Complemento:</label>
+        <span id="complemento"></span><br>
+
+        <label for="bairro">Bairro:</label>
+        <span id="bairro"></span><br>
+
+        <label for="cidade">Cidade:</label>
+        <span id="cidade"></span><br>
+
+        <label for="uf">UF:</label>
+        <span id="uf"></span><br>
+
+        <h2>Endereços de Entrega</h2>
+        <div id="enderecos-entrega"></div>
+        <button type="button" id="adicionar-endereco">Adicionar Endereço de Entrega</button><br><br>
+
+        <button type="submit">Salvar Alterações</button>
+    </form>
+
+    <script src="./codigo_fonte/JS/alterarCliente.js"></script>
+</body>
+</html>

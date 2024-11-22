@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <title>Listar Usuários</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Listar Usuários</h1>
+        <div class="mb-3">
+            <input type="text" id="searchName" class="form-control" placeholder="Filtrar por nome" onkeyup="filtrarUsuarios()">
+        </div>
+        <div class="mb-3">
+            <button onclick="irParaCadastro()" class="btn btn-primary">+</button>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th>Grupo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="userTable">
+                <!-- As linhas de usuários serão inseridas aqui -->
+            </tbody>
+        </table>
+        <ul class="pagination" id="pagination">
+            <!-- Paginação será inserida aqui -->
+        </ul>
+    </div>
+    <nav>
+        s
+    </nav>
+    <script src="./codigo_fonte/JS/listarUsuario.js"></script>
+</body>
+</html>

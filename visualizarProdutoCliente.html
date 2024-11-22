@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .product-details { padding: 20px; }
+        .product-image-carousel { width: 100%; height: auto; }
+        .buy-button { background-color: #007bff; color: white; border: none; padding: 10px 20px; cursor: pointer; }
+        .buy-button:disabled { cursor: not-allowed; }
+    </style>
+</head>
+<body>
+    <div class="container product-details">
+        <div id="productCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" id="carouselImages">
+                <!-- As imagens serão adicionadas dinamicamente aqui -->
+            </div>
+            <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <h2 id="productName"></h2>
+        <p id="productDescription"></p>
+        <p><strong>Preço:</strong> R$ <span id="productPrice"></span></p>
+        <p><strong>Avaliação:</strong> <span id="productRating"></span> (4/5)</p>
+
+        <button id="buyButton" class="buy-button">Comprar</button>
+    </div>
+
+    <script src="./codigo_fonte/JS/visualizarProdutoClientee.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

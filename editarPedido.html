@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Pedido</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/editarPedido.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Editar Pedido</h1>
+        <form id="editarPedidoForm">
+            <div class="form-group">
+                <label for="numeroPedido">Número do Pedido</label>
+                <input type="text" id="numeroPedido" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select id="status" class="form-control">
+                    <option value="aguardando pagamento">Aguardando Pagamento</option>
+                    <option value="pagamento rejeitado">Pagamento Rejeitado</option>
+                    <option value="pagamento com sucesso">Pagamento com Sucesso</option>
+                    <option value="aguardando retirada">Aguardando Retirada</option>
+                    <option value="em transito">Em Trânsito</option>
+                    <option value="entregue">Entregue</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./codigo_fonte/JS/editarPedido.js"></script>
+</body>
+</html>

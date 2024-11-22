@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Produto</title>
+    <style>
+        .file-names {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        .product-image {
+            max-width: 100px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alterar Produto</h1>
+    <form id="formAlterarProduto" enctype="multipart/form-data">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="avaliacao">Avaliação:</label>
+        <input type="number" class="form-control" id="avaliacao" name="avaliacao" step="0.5" min="0" max="5" required>
+
+        <label for="descricaoDetalhada">Descrição Detalhada:</label>
+        <textarea id="descricaoDetalhada" name="descricaoDetalhada" required></textarea><br><br>
+
+        <label for="preco">Preço:</label>
+        <input type="number" step="0.01" id="preco" name="preco" required><br><br>
+
+        <label for="qtdEstoque">Quantidade em Estoque:</label>
+        <input type="number" id="qtdEstoque" name="qtdEstoque" required><br><br>
+
+        <label for="ativo">Ativo:</label>
+        <select id="ativo" name="ativo">
+            <option value="true">Ativo</option>
+            <option value="false">Inativo</option>
+        </select><br><br>
+
+        <label for="imagens">Imagens:</label>
+        <input type="file" id="imagens" name="imagens" multiple><br><br>
+        <div id="fileNames" class="file-names">Nenhum arquivo escolhido</div>
+
+        <label for="imagemPrincipal">Índice da Imagem Principal:</label>
+        <input type="number" id="imagemPrincipal" name="imagemPrincipal"><br><br>
+
+        <button type="submit">Alterar</button>
+    </form>
+
+    <script src="./codigo_fonte/JS/alterarProduto.js"></script>
+</body>
+</html>

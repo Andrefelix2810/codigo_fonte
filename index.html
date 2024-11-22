@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/08ed2a66c1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./CSS/styles.css">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> <!-- Adiciona a fonte Poppins -->
+</head>
+<body>
+    <div class="header">
+        <img src="IMG/FAC.png" alt="Logo da Loja" class="logo">
+        <div class="nav-links">
+            <a href="./catalogo.html" class="nav-link">Catálogo</a>
+            <a href="#" class="nav-link">Masculino</a>
+            <a href="#" class="nav-link">Feminino</a>
+            <a href="#" class="nav-link">Internacional</a>
+        </div>
+        <div class="search-container">
+            <div class="group">
+                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                    <g>
+                        <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                    </g>
+                </svg>
+                <input placeholder="Procurar" type="search" class="input">
+            </div>
+        </div>
+        <div class="icon-container">
+            <img src="IMG/coracao.png" alt="Curtidos" class="icones">
+            <a href="#" class="login-link">
+                <img src="IMG/perfil.png" alt="Perfil" class="icones">
+                <span id="olaUsuario" class="saudacao-usuario">Entre</span>
+            </a>
+            <div class="dropdown-menu" id="userMenu">
+                <a class="dropdown-item" href="loginCliente.html" id="loginOption">Entrar</a>
+                <a class="dropdown-item" href="./alterarCliente.html" id="alterarOption" style="display: none;">Alterar</a>
+                <a class="dropdown-item" href="#" id="logoutOption" style="display: none;">Deslogar</a>
+                <a class="dropdown-item" href="listarPedido.html" id="listaPedido" style="display: none;">Pedidos</a>
+            </div>
+            <img src="IMG/carrinho.png" alt="Carrinho" class="icones" id="cartIcon">
+            <span id="cartCount" class="badge badge-pill badge-danger">0</span>
+        </div>
+    </div>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="w-100 img-fluid d-md-none" src="./assets/Mobile/UpscaleImage_3_20240407.jpeg"
+              alt="Modelo feminina vestindo blusa rosa fluorescente, em fundo lilás.">
+            <img class="w-100 img-fluid d-none d-md-block d-xl-none" src="./assets/Tablet/UpscaleImage_3_20240407.jpeg"
+              alt="Modelo feminina vestindo blusa rosa fluorescente, em fundo lilás.">
+            <img class="w-100 img-fluid d-none d-xl-block" src="./assets/Desktop/UpscaleImage_3_20240407.jpeg"
+              alt="Modelo feminina vestindo blusa rosa fluorescente, em fundo lilás.">
+          </div>
+          <div class="carousel-item">
+            <img class="w-100 img-fluid d-md-none" src="./assets/Mobile/BANNERCHAMPIONS.jpeg"
+              alt="Modelo feminina utilizando óculos escuros e vestindo conjunto esportivo de blusa e calça na cor preta, sentada em um sofá preto em um fundo rosa.">
+            <img class="w-100 img-fluid d-none d-md-block d-xl-none" src="./assets/BANNERCHAMPIONS.jpeg"
+              alt="Modelo feminina utilizando óculos escuros e vestindo conjunto esportivo de blusa e calça na cor preta, sentada em um sofá preto em um fundo rosa.">
+            <img class="w-100 img-fluid d-none d-xl-block" src="./assets/Desktop/BANNERCHAMPIONS.jpeg"
+              alt="Modelo feminina utilizando óculos escuros e vestindo conjunto esportivo de blusa e calça na cor preta, sentada em um sofá preto em um fundo rosa.">
+            
+          </div>
+          <div class="carousel-item">
+            <img class="w-100 img-fluid d-md-none" src="./assets/Mobile/BANNERPRINCIPAL.jpeg"
+              alt="Banner principal FAC.">
+            <img class="w-100 img-fluid d-none d-md-block d-xl-none" src="./assets/Tablet/BANNERPRINCIPAL.jpeg"
+              alt="Banner principal FAC.">
+            <img class="w-100 img-fluid d-none d-xl-block" src="./assets/Desktop/BANNERPRINCIPAL.jpeg"
+              alt="Banner principal FAC.">
+            <div class="carousel-caption">
+              <h5 class="fs-1"></h5>
+              <p class="fs-4"></p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    
+    <!--INICIO CARROSSEL BUSQYE POR CATEGORIA-->
+      <h2 class="text-center my-3 my-xl-5">Busque por categoria:</h2>
+    
+      <div class="container row mx-auto g-4">
+    
+        <div class="col-6 col-md-4 col-xxl-2">
+          <div id="carouselSul" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                
+                <img src="./assets/Mobile/categorias/InterSul.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/Desktop/categorias/Gremio.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/Desktop/categorias/Athletico.jpg" class="d-block w-100" alt="...">
+              </div>
+              <!-- Adicione outras imagens do carrossel aqui -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSul" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselSul" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="card rounded-0 border-0">
+            <div class="card-header bg-red ">
+              <a href="./resultado-final/index.html#Sul"><p class="text-centerCards card-text">Sul</p></a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-6 col-md-4 col-xxl-2">
+          <div id="carouselSudeste" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/Mobile/categorias/SantosSudeste.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/Desktop/categorias/Vasco.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/Desktop/categorias/Galo.jpg" class="d-block w-100" alt="...">
+              </div>
+              <!-- Adicione outras imagens do carrossel aqui -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSudeste" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselSudeste" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="card rounded-0 border-0">
+            <div class="card-header bg-red ">
+              <a href="./resultado-final/index.html#Sudeste"><p class="text-centerCards card-text">Sudeste</p></a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-6 col-md-4 col-xxl-2">
+          <div id="carouselCentro" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/Desktop/categorias/VilaNova.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/Desktop/categorias/GoiasCentro-Oeste.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/Desktop/categorias/TimeNPC.jpg" class="d-block w-100" alt="...">
+              </div>
+              <!-- Adicione outras imagens do carrossel aqui -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCentro" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselCentro" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="card rounded-0 border-0">
+            <div class="card-header bg-red ">
+              <a href="./resultado-final/index.html#Centro Oeste"><p class="text-centerCards card-text">Centro Oeste</p></a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-6 col-md-4 col-xxl-2">
+          <div id="carouselNorte" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/Mobile/categorias/RemoNorte.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/Desktop/categorias/Paysandu.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/Desktop/categorias/Paysandu2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <!-- Adicione outras imagens do carrossel aqui -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselNorte" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselNorte" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="card rounded-0 border-0">
+            <div class="card-header bg-red ">
+              <a href="./resultado-final/index.html#Norte"><p class="text-centerCards card-text">Norte</p></a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-6 col-md-4 col-xxl-2">
+          <div id="carouselNordeste" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/Mobile/categorias/VitóriaNordeste.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/Desktop/categorias/Bahia.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/Desktop/categorias/Sport.jpg" class="d-block w-100" alt="...">
+              </div>
+              <!-- Adicione outras imagens do carrossel aqui -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselNordeste" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselNordeste" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="card rounded-0 border-0">
+            <div class="card-header bg-red ">
+              <a href="./resultado-final/index.html#Nordeste"><p class="text-centerCards card-text">Nordeste</p></a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-6 col-md-4 col-xxl-2">
+          <div class="card rounded-0 border-0">
+            <img class="d-md-none d-block" src="./assets/Mobile/categorias/FAC.jpg"
+              alt="Óculos de Sol com lentes arredondadas e armação dourada, em fundo verde limão.">
+            <img class="d-none d-md-block d-xl-none" src="./assets/Tablet/FAC.jpg"
+              alt="Óculos de Sol com lentes arredondadas e armação dourada, em fundo verde limão.">
+            <img class="d-none d-xl-block" src="./assets/Desktop/categorias/FAC.jpg"
+              alt="Óculos de Sol com lentes arredondadas e armação dourada, em fundo verde limão.">
+            <div class="card-header bg-red ">
+              <p class="text-centerCards card-text">
+                Nós
+              </p>
+            </div>
+          </div>
+        </div>
+    <!--FIM CARROSSEL BUSQYE POR CATEGORIA-->
+      </div>
+      <!--QUEBRA DE PÁGINA-->
+      <br>
+      <!--QUEBRA DE PÁGINA-->
+    
+    
+    
+      <!--INICIO CARROSSEL DE ESCUDOS-->
+      <div class="container">
+        
+        <div id="carousel1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000"> <!-- Adiciona data-bs-interval para definir o intervalo de troca de slide -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row mx-auto g-4">
+                <!-- Colunas para os logos -->
+                <div class="col-sm-1"><img src="./ImagensCarrossel/9999999999.jpg" class="d-block" alt="Logo 1" style=" max-height: 50px;"></div>
+                <div class="col-sm-1"><img src="./ImagensCarrossel/1111111.jpg" class="d-block" alt="Logo 2" style=" max-height: 50px;"></div>
+                  <!-- Adicione mais 10 colunas conforme necessário -->
+                <div class="col-sm-1"><img src="./ImagensCarrossel/7777777 (1).jpg" class="d-block" alt="Logo 3" style=" max-height: 50px;"></div>
+                <div class="col-sm-1"><img src="./ImagensCarrossel/55555555.jpg" class="d-block" alt="Logo 4" style=" max-height: 50px;"></div>
+                <div class="col-sm-1"><img src="./ImagensCarrossel/66666666 - Copia.jpg" class="d-block" alt="Logo 5" style=" max-height: 50px;"></div>
+                <div class="col-sm-1"><img src="./ImagensCarrossel/8888888888.jpg" class="d-block" alt="Logo 6" style=" max-height: 50px;"></div>
+                <div class="col-sm-1"><img src="./ImagensCarrossel/10000000000.jpg" class="d-block" alt="Logo 7" style=" max-height: 50px;"></div>
+                <div class="col-sm-1"><img src="./ImagensCarrossel/12222222222.jpg" class="d-block" alt="Logo 8" style=" max-height: 50px;"></div>
+                <div class="col-sm-1"><img src="./ImagensCarrossel/44444444444.jpg" class="d-block" alt="Logo 9" style=" max-height: 50px;"></div>
+                <div class="col-sm-1"><img src="./ImagensCarrossel/787777777777.jpg" class="d-block" alt="Logo 10" style=" max-height: 50px;"></div>
+                <div class="col-sm-1"><img src="./ImagensCarrossel/18888.jpg" class="d-block" alt="Logo 11" style=" max-height: 50px;"></div>
+                <div class="col-sm-1"><img src="./ImagensCarrossel/233333.jpg" class="d-block" alt="Logo 12" style=" max-height: 50px;"></div>
+              </div>
+            </div>
+    
+            <!-- Segundo slide -->
+            <div class="carousel-item">
+              <div class="row mx-auto g-4">
+                <div class="col-sm-1"><img src="./ImagensCarrossel/3333333.jpg" class="d-block" alt="Logo 13" style=" max-height: 50px;"></div>
+                <div class="col-sm-1"><img src="./ImagensCarrossel/15555555.jpg" class="d-block" alt="Logo 14" style=" max-height: 50px;"></div>
+                <!-- Adicione mais 10 colunas conforme necessário -->
+                <div class="col-sm-1"><img src="./ImagensCarrossel/144444444.jpg" class="d-block" alt="Logo 15" style=" max-height: 50px;"></div>
+                <div class="col-sm-1"><img src="./ImagensCarrossel/166666666.jpg" class="d-block" alt="Logo 16" style=" max-height: 50px;"></div>
+                <div class="col-sm-1"><img src="./ImagensCarrossel/177777777.jpg" class="d-block" alt="Logo 17" style=" max-height: 50px;"></div>
+                <div class="col-sm-1"><img src="./ImagensCarrossel/25555555555.jpg" class="d-block" alt="Logo 18" style=" max-height: 50px;"></div>
+                <div class="col-sm-1"><img src="./ImagensCarrossel/1333333333.jpg" class="d-block" alt="Logo 19" style=" max-height: 50px;"></div>
+                <div class="col-sm-1"><img src="./ImagensCarrossel/2999999999.jpg" class="d-block" alt="Logo 20" style=" max-height: 50px;"></div>
+                <div class="col-sm-1"><img src="./ImagensCarrossel/21111111111111.jpg" class="d-block" alt="Logo 21" style=" max-height: 50px;"></div>
+                <div class="col-sm-1"><img src="./ImagensCarrossel/200000000000000.jpg" class="d-block" alt="Logo 22" style=" max-height: 50px;"></div>
+                <div class="col-sm-1"><img src="./ImagensCarrossel/3000000000000.jpg" class="d-block" alt="Logo 23" style=" max-height: 50px;"></div>
+                <div class="col-sm-1"><img src="./ImagensCarrossel/111111111111111 (1).jpg" class="d-block" alt="Logo 24" style=" max-height: 50px;"></div>
+              </div>
+            </div>
+            
+          </div>
+          <!-- Removido os botões de navegação -->
+        </div>
+    
+        <!-- Adicione mais carrosséis aqui, conforme necessário -->
+    
+      </div>
+    <!--FIM CARROSSEL DE ESCUDOS-->
+    
+    
+    <!--INÍCIO É O GRID DE PROMOÇÕES-->
+    
+    <h2 class="container text-center my-3 my-xl-5">Produtos em alta!</h2>
+    <div class="container">
+        <div class="row mx-auto" id="productList">
+            <!-- Os produtos serão carregados dinamicamente aqui -->
+        </div>
+    </div>
+    <!--FIM GRID DE PROMOÇÕES-->
+    
+    <!--INICIO VALORES DA EMPRESA-->
+      <section class="pb-4 text-bg-dark">
+    
+        <h2 class="text-center py-3" style="color: #ffffff;">Conheça todas as nossas facilidades</h2>
+    
+        <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center gap-3 px-3">
+          <div class="divs-facilidades d-flex align-items-center">
+            <div><i class="verde-limao bi bi-x-diamond fs-1"></i></div>
+            <div>
+              <div class="ms-3 mb-1 verde-limao">PAGUE PELO PIX</div>
+              <div class="texto-menor ms-3">Ganhe 5% OFF em
+                pagamentos via PIX</div>
+            </div>
+          </div>
+    
+          <div class="divs-facilidades d-flex">
+            <div><i class="verde-limao bi bi-arrow-repeat fs-1"></i></div>
+            <div>
+              <div class="ms-3 mb-1 verde-limao">TROCA GRÁTIS</div>
+              <div class="texto-menor ms-3">Fique livre para trocar em até 30 dias.</div>
+            </div>
+          </div>
+    
+          <div class="divs-facilidades d-flex">
+            <div><i class="verde-limao bi bi-flower1 fs-1"></i></div>
+            <div>
+              <div class="ms-3 mb-1 verde-limao">SUSTENTABILIDADE</div>
+              <div class="texto-menor ms-3">Moda responsável, que respeita o meio ambiente.</div>
+            </div>
+          </div>
+        </div>
+    
+      </section>
+    <!--FIM VALORES DA EMPRESA-->
+    
+    
+    <!--INICIO FOMRULARIO PARA PROMOÇÕES-->
+      <form class="container border border-secondary my-3 my-xl-5 p-3 text-center div-novidades mx-auto">
+        <h5>
+          Quer receber nossas novidades, promoções exclusivas e 10% OFF na primeira
+          compra? Cadastre-se!
+        </h5>
+    
+        <div class="input-group my-3">
+          <input type="email" class="form-control border-secondary rounded-0" placeholder="Digite seu e-mail"
+            aria-label="Digite seu e-mail" aria-describedby="button-addon2" />
+          <button type="button" class="btn btn-primary botao-lilas rounded-0 border-0 " id="button-addon2">Enviar</button>
+        </div>
+      </form>
+      <!--FIM FOMRULARIO PARA PROMOÇÕES-->
+    
+      <!--INICIO FOOTER-->
+      <footer class="footer">
+        <div class="container">
+            <div class="row">
+    
+    
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer-about">
+                        <div class="footer-logo">
+                            <a href="#"><img src="./assets/LogoFAC.png" alt=""></a>
+                        </div>
+                        <p>Vista seu orgulho!</p>
+                        <a href="#"><img src="./assets/payment.png" alt=""></a>
+                    </div>
+                </div>
+    
+                <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+                    <div class="footer-widget">
+                        <h6>Ajuda</h6>
+                        <ul>
+                            <li><a href="./about.html">Sobre a FAC</a></li>
+                            <li><a href="./ProgramaDeAfiliados/FormProgramaDeAfiliados/ProgramaDeAfiliados.html">Programa de afiliados</a></li>
+                            <li><a href="./TrocaDevolução.html">Troca e Devolução</a></li>
+                            <li><a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Política de privacidade</a></li>                      
+                            <li><a href="./NossoTime.html">Nosso Time</a></li>
+                            <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Termos de Uso </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h2> </h2>
+                <p> Última edição: 22/04/2024 - Esta política de Termos de Uso é válida a partir de Apr 2024. </p>
+                
+                <p> A FAC, pessoa jurídica de direito privado, com sede na Av. Eng. Eusébio Stevaux, 823 - Santo Amaro, São Paulo - SP, inscrita no CNPJ/MF sob o nº 11.222.333/0004-05 (“Lojista” ou “nós”) leva a sua privacidade a sério e zela pela segurança e proteção de dados de todos os seus clientes, parceiros, fornecedores e usuários (“Usuários” ou “você”) do site “www.FAC.com.br” e qualquer outro site, Loja, aplicativo operado pelo Lojista (aqui designados, simplesmente, “FAC”). </p>
+    
+                <p> Esta Política de Privacidade (“Política de Privacidade”) destina-se a informá-lo sobre o modo como nós utilizamos e divulgamos informações coletadas em suas visitas à nossa Loja e em mensagens que trocamos com você (“Comunicações”). </p>
+    
+                <p> AO ACESSAR A LOJA, ENVIAR COMUNICAÇÕES OU FORNECER QUALQUER TIPO DE DADO PESSOAL, VOCÊ DECLARA ESTAR CIENTE E DE ACORDO COM ESTA POLÍTICA DE PRIVACIDADE, A QUAL DESCREVE AS FINALIDADES E FORMAS DE TRATAMENTO DE SEUS DADOS PESSOAIS QUE VOCÊ DISPONIBILIZAR NA LOJA. </p>
+    
+                <p> Esta Política de Privacidade fornece uma visão geral de nossas práticas de privacidade e das escolhas que você pode fazer, bem como direitos que você pode exercer em relação aos Dados Pessoais tratados por nós. Se você tiver alguma dúvida sobre o uso de Dados Pessoais, entre em contato com suport@FAC.com.br </p>
+    
+                <p> Além disso, a Política de Privacidade não se aplica a quaisquer aplicativos, produtos, serviços, site ou recursos de mídia social de terceiros que possam ser oferecidos ou acessados por meio da Loja. O acesso a esses links fará com que você deixe a Loja e possa resultar na coleta ou compartilhamento de informações sobre você por terceiros. Nós não controlamos, endossamos ou fazemos quaisquer representações sobre esses sites de terceiros ou suas práticas de privacidade, que podem ser diferentes das nossas. Recomendamos que você revise a política de privacidade de qualquer site com o qual você interaja antes de permitir a coleta e o uso de seus Dados Pessoais. </p>
+    
+                <p> Definições - Para os fins desta Política de Privacidade: </p>
+    
+                <ul>
+                    <li> “Dados Pessoais” significa qualquer informação que, direta ou indiretamente, identifique ou possa identificar uma pessoa natural, como por exemplo, nome, CPF, data de nascimento, endereço IP, dentre outros; </li>
+                    <li> “Dados Pessoais Sensíveis” significa qualquer informação que revele, em relação a uma pessoa natural, origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização de caráter religioso, filosófico ou político, dado referente à saúde ou à vida sexual, dado genético ou biométrico; </li>
+                    <li> “Tratamento de Dados Pessoais” significa qualquer operação efetuada no âmbito dos Dados Pessoais, por meio de meios automáticos ou não, tal como a recolha, gravação, organização, estruturação, armazenamento, adaptação ou alteração, recuperação, consulta, utilização, divulgação por transmissão, disseminação ou, alternativamente, disponibilização, harmonização ou associação, restrição, eliminação ou destruição. Também é considerado Tratamento de Dados Pessoais qualquer outra operação prevista nos termos da legislação aplicável; </li>
+                    <li> “Leis de Proteção de Dados” significa todas as disposições legais que regulem o Tratamento de Dados Pessoais, incluindo, porém sem se limitar, a Lei nº 13.709/18, Lei Geral de Proteção de Dados Pessoais (“LGPD”). </li>
+                </ul>
+    
+                <p> Uso de Dados Pessoais - Coletamos e usamos Dados Pessoais para gerenciar seu relacionamento conosco e melhor atendê-lo quando você estiver adquirindo produtos e/ou serviços na Loja, personalizando e melhorando sua experiência. Exemplos de como usamos os dados incluem: </p>
+    
+                <ul>
+                    <li> Viabilizar que você adquira produtos e/ou serviços na Loja; </li>
+                    <li> Para confirmar ou corrigir as informações que temos sobre você; </li>
+                    <li> Para enviar informações que acreditamos ser do seu interesse; </li>
+                    <li> Para personalizar sua experiência de uso da Loja; </li>
+                    <li> Para personalizar o envio de publicidades para você, baseada em seu interesse em nossa Loja; </li>
+                    <li> Para entrarmos em contato por um número de telefone e/ou endereço de e-mail fornecido. Podemos entrar em contato com você pessoalmente, por mensagem de voz, através de equipamentos de <li> discagem automática, por mensagens de texto (SMS), por e-mail, ou por qualquer outro meio de comunicação que seu dispositivo seja capaz de receber, nos termos da lei e para fins <li> comerciais razoáveis. </li>
+                </ul>
+    
+                <p> Dados Pessoais fornecidos também podem ser utilizados na forma que julgarmos necessária ou adequada: </p>
+     
+                <ul>
+                    <li> Nos termos das Leis de Proteção de Dados; </li> 
+                    <li> Para atender exigências de processo judicial; </li>
+                    <li> Para cumprir decisão judicial, decisão regulatória ou decisão de autoridades competentes, incluindo autoridades fora do país de residência; </li>
+                    <li> Para proteger nossas operações; </li>
+                    <li> Para proteger direitos, privacidade, segurança nossos, seus ou de terceiros; </li>
+                    <li> Para detectar e prevenir fraude; 
+                    <li> Permitir-nos usar as ações disponíveis ou limitar danos que venhamos a sofrer; </li>
+                    <li> Outros modos permitidos por lei. </li>
+                </ul>
+    
+                <p> A NOSSA LOJA NÃO SE DESTINA A PESSOAS COM MENOS DE 18 (DEZOITO) ANOS E PEDIMOS QUE TAIS PESSOAS NÃO NOS FORNEÇAM QUALQUER DADO PESSOAL </p>
+    
+                <p> A NOSSA LOJA NÃO SE DESTINA A PESSOAS COM MENOS DE 18 (DEZOITO) ANOS E PEDIMOS QUE TAIS PESSOAS NÃO NOS FORNEÇAM QUALQUER DADO PESSOAL </p>
+    
+                <p> Não fornecimento de Dados Pessoais: </p>
+    
+                <p> 
+                Você não é obrigado a compartilhar os Dados Pessoais que solicitamos, no entanto, se você optar por não os compartilhar, em alguns casos, não poderemos fornecer a você acesso completo à Loja, alguns recursos especializados ou ser capaz de prestar a assistência necessária ou, ainda, viabilizar a entrega do produto ou prestar o serviço contratado por você. 
+                </p>
+    
+                <p> Dados coletados: </p>
+    
+                <p> 
+                O público em geral poderá navegar na Loja sem necessidade de qualquer cadastro e envio de Dados Pessoais. No entanto, algumas das funcionalidades da Loja poderão depender de cadastro e envio de Dados Pessoais como concluir a compra/contratação do serviço e/ou a viabilizar a entrega do produto/prestação do serviço por nós.
+                </p>
+    
+                <p> No contato a Loja, nós podemos coletar: </p>
+    
+                <ul>
+                    <li> Dados de contato. (Nome, sobrenome, número de telefone, cidade, Estado e endereço de e-mail); </li>
+                    <li> Informações que você envia; </li>
+                    <li> Informações que você envia via formulário (dúvidas, reclamações, sugestões, críticas, elogios etc.). </li>
+                </ul>
+    
+                <p> Na navegação geral na Loja, nós poderemos coletar: </p>
+    
+                <ul>
+                    <li> Dados de localização. Dados de geolocalização quando você acessa a Loja;
+                    <li> Preferências, ou seja, informações sobre suas preferências e interesses em relação aos produtos/serviços (quando você nos diz o que eles são ou quando os deduzimos do que sabemos sobre você); </li>
+                    <li> Dados de navegação na Loja, ou seja, informações sobre suas visitas e atividades na Loja, incluindo o conteúdo (e quaisquer anúncios) com os quais você visualiza e interage, informações sobre o navegador e o dispositivo que você está usando, seu endereço IP, sua localização, o endereço do site a partir do qual você chegou. Algumas dessas informações são coletadas usando nossas Ferramentas de Coleta Automática de Dados, que incluem cookies, web beacons e links da web incorporados. Para saber mais, leia como nós usamos Ferramentas de Coleta Automática de Dados no item 7 abaixo; </li>
+                    <li> Dados anônimos ou agregados. Respostas anônimas para pesquisas ou informações anônimas e agregadas sobre como a Loja é usufruída. Durante nossas operações, em certos casos, aplicamos um processo de desidentificação ou pseudonimização aos seus dados para que seja razoavelmente improvável que você identifique você através do uso desses dados com a tecnologia disponível,
+                    Outras informações que podemos coletar. Outras informações que não revelem especificamente a sua identidade ou que não são diretamente relacionadas a um indivíduo, tais como informações sobre navegador e dispositivo, dados de uso da Loja e informações coletadas por meio de cookies, pixel tags e outras tecnologias. </li>
+                </ul>
+    
+                <p> Ao menos que você informe em algum formulário livre preenchido por você, nós não coletamos Dados Pessoais Sensíveis. </p>
+    
+                <p> Compartilhamento de Dados Pessoais com terceiros -  Nós poderemos compartilhar seus Dados Pessoais: </p>
+    
+                <ul>
+                    <li> Com a(s) empresa(s) parceira(s) que você selecionar ou optar em enviar os seus dados, dúvidas, perguntas etc., bem como com provedores de serviços ou parceiros para gerenciar ou suportar certos aspectos de nossas operações comerciais em nosso nome. Esses provedores de serviços ou parceiros podem estar localizados nos Estados Unidos, na Argentina, no Brasil ou em outros locais globais, incluindo servidores para homologação e produção, e prestadores de serviços de hospedagem e armazenamento de dados, gerenciamento de fraudes, suporte ao cliente, vendas em nosso nome, atendimento de pedidos, personalização de conteúdo, atividades de publicidade e marketing (incluindo publicidade digital e personalizada) e serviços de TI, por exemplo; </li>
+                    <li> Com terceiros, com o objetivo de nos ajudar a gerenciar a Loja; </li>
+                    <li> Com terceiros, caso ocorra qualquer reorganização, fusão, venda, joint venture, cessão, transmissão ou transferência de toda ou parte da nossa empresa, ativo ou capital (incluindo os relativos à falência ou processos semelhantes). </li>
+                </ul>
+    
+                <p> Transferências internacionais de Dados: </p>
+    
+                <p>
+                Dados Pessoais e informações de outras naturezas coletadas por nós podem ser transferidos ou acessados por entidades pertencentes ao grupo corporativo das empresas parceiras em todo o mundo de acordo com esta Política de Privacidade.
+                </p>
+    
+                <p> Forma de coleta automática de Dados Pessoais: </p>
+    
+                <p>
+                Quando você visita a Loja, ela pode armazenar ou recuperar informações em seu navegador, seja na forma de cookies e de outras tecnologias semelhantes. Essas informações podem ser sobre você, suas preferências ou seu dispositivo e são usadas principalmente para que a Loja funcione como você espera. As informações geralmente não o identificam diretamente, mas podem oferecer uma experiência na internet mais personalizada.
+                </p>
+    
+                <p> De acordo com esta Política de Privacidade, nós e nossos prestadores de serviços terceirizados podemos coletar seus Dados Pessoais de diversas formas, incluindo, entre outros: </p>
+    
+                <ul>
+                    <li> Por meio do navegador ou do dispositivo: Algumas informações são coletadas pela maior parte dos navegadores ou automaticamente por meio de dispositivos de acesso à internet, como o tipo de computador, resolução da tela, nome e versão do sistema operacional, modelo e fabricante do dispositivo, idioma, tipo e versão do navegador de Internet que está utilizando. Podemos utilizar essas informações para assegurar que a Loja funcione adequadamente; </li>
+                    <li> Uso de cookies: Os cookies permitem a coleta de informações tais como o tipo de navegador, o tempo dispendido na Loja, as páginas visitadas, as preferências de idioma, e outros dados de tráfego anônimos. Nós e nossos prestadores de serviços podemos utilizar essas informações para, dentre outros, personalizar sua experiência ao utilizar a Loja, assim como para direcionar publicidade para você, de acordo com os seus interesses. Também coletamos informações estatísticas sobre o uso da Loja para aprimoramento contínuo do nosso design e funcionalidade; </li>
+                    <li> Uso de pixel tags e outras tecnologias similares: Pixel tags (também conhecidos como Web beacons e GIFs invisíveis) podem ser utilizados para rastrear ações de usuários da Loja (incluindo destinatários de e-mails), medir o sucesso das nossas campanhas de marketing e coletar dados estatísticos sobre o uso da Loja e taxas de resposta. Em caso de ter ativa a personalização de anúncios em ferramentas como Facebook, Google ou Bing, a informação pode ser usada para mostrar anúncios em seus serviços.No caso de você não desejar ser rastreado pode pedir para cada um dos serviços. </li>
+                </ul>
+    
+                <p> Caso não deseje que suas informações sejam coletadas por meio de cookies, você pode configurar os cookies no menu "opções" ou "preferências" do seu browser. </p>
+    
+                <p> Você deverá ter em mente que, em certos casos (por exemplo, devido a requisitos legais), o seu pedido poderá não ser imediatamente satisfeito, além de que nós poderemos não conseguir atendê-lo por conta de cumprimento de obrigações legais. </p>
+    
+                <p> Segurança dos Dados Pessoais: </p>
+    
+                <p>
+                Buscamos adotar as medidas técnicas e organizacionais previstas pelas Leis de Proteção de Dados adequadas para proteção dos Dados Pessoais na nossa organização. Infelizmente, nenhuma transmissão ou sistema de armazenamento de dados tem a garantia de serem 100% seguros. Caso tenha motivos para acreditar que sua interação conosco tenha deixado de ser segura (por exemplo, caso acredite que a segurança de qualquer uma de suas contas foi comprometida), favor nos notificar imediatamente.
+                </p>
+    
+                <p> Links de hipertexto para outros sites e redes sociais: </p>
+    
+                <p>
+                A Loja poderá, de tempos a tempos, conter links de hipertexto que redirecionará você para sites das redes dos nossos parceiros, anunciantes, fornecedores etc. Se você clicar em um desses links para qualquer um desses sites, lembramos que cada site possui as suas próprias práticas de privacidade e que não somos responsáveis por essas políticas. Consulte as referidas políticas antes de enviar quaisquer Dados Pessoais para esses sites.
+                </p>
+    
+                <p>
+                Não nos responsabilizamos pelas políticas e práticas de coleta, uso e divulgação (incluindo práticas de proteção de dados) de outras organizações, tais como Facebook, Apple, Google, Microsoft, ou de qualquer outro desenvolvedor de software ou provedor de aplicativo, Loja de mídia social, sistema operacional, prestador de serviços de internet sem fio ou fabricante de dispositivos, incluindo todos os Dados Pessoais que divulgar para outras organizações por meio dos aplicativos, relacionadas a tais aplicativos, ou publicadas em nossas páginas em mídias sociais. Nós recomendamos que você se informe sobre a política de privacidade de cada site visitado ou de cada prestador de serviço utilizado.
+                </p>
+    
+                <p> Atualizações desta Política de Privacidade: </p>
+    
+                <p>
+                Se modificarmos nossa Política de Privacidade, publicaremos o novo texto na Loja, com a data de revisão atualizada. Podemos alterar esta Política de Privacidade a qualquer momento. Caso haja alteração significativa nos termos dessa Política de Privacidade, podemos informá-lo por meio das informações de contato que tivermos em nosso banco de dados ou por meio de notificação em nossa Loja.
+                </p>
+    
+                <p>
+                Recordamos que nós temos como compromisso não tratar os seus Dados Pessoais de forma incompatível com os objetivos descritos acima, exceto se de outra forma requerido por lei ou ordem judicial.
+                </p>
+    
+                <p>
+                Sua utilização da Loja após as alterações significa que aceitou as Políticas de Privacidade revisadas. Caso, após a leitura da versão revisada, você não esteja de acordo com seus termos, favor encerrar o acesso à Loja.
+                </p>
+    
+                <p> Pessoa responsável do tratamento dos Dados Pessoais: </p>
+    
+                <p>
+                Caso pretenda exercer qualquer um dos direitos previstos nesta Política de Privacidade e/ou nas Leis de Proteção de Dados, ou resolver quaisquer dúvidas relacionadas ao Tratamento de seus Dados Pessoais, favor contatar-nos através do e-mail suport@FAC.com.br
+                </p>
+    
+                <h4> Estou ciente sobre as <span> Políticas de Privacidade </span> e concordo. </h4>
+    
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: black;">Discordo</button>
+            <button type="button" class="btn btn-primary" style="background-color: #9C28EF; border-color: #9C28EF;">Concordo</button>
+          </div>
+        </div>
+      </div>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="col-lg-2  col-md-3 col-sm-6">
+                    <div class="footer-widget">
+                        <h6>Contato</h6>
+                        <ul>
+                            <li><a href="./FAQ.html">Portal de Ajuda</a></li>
+                            <li><a href="./Trabalhe conosco/TrabalheConosco.html">Trabalhe conosco</a></li>
+                            <li><a href="#">SAC</a></li>
+                            <li><i class="fa-solid fa-phone-volume" style="color: #ffffff;"></i><a href="#"> (11) 96643-2246</a></li>
+                            <li><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i><a href="#"> (11) 96643-2246</a></li>
+    
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+                    <div class="footer-widget">
+                        <h6>Inscreva-se</h6>
+                        <div class="footer-newslatter">
+                            <p>Digite seu e-mail para ser notificado sobre nossas soluções e notícias!</p>
+                            <form action="#">
+                                <input type="text" placeholder="Your Email">
+                                <button type="submit"><span><i class="fa fa-envelope"
+                                            arial-hidden="true"></i></span></button>
+                            </form>
+                        </div>
+    
+                    </div>
+                </div>
+    
+    
+            </div>
+    
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="footer-copyright-text">
+                        <p>Produzido &copy; 2024 por FAC | E-commerce com fins lucrativos </i>
+                             by <a href="#">FAC</a></p>
+                    </div>
+                </div>
+            </div>
+    
+    
+        </div>
+    
+    </footer>
+    <!--FIM FOOTER-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    </div>
+    
+    <ul id="pagination" class="pagination"></ul>
+
+    <!-- Modal do Carrinho -->
+    <div class="cart-modal" id="cartModal">
+        <span class="close-btn" id="closeCartModal">&times;</span>
+        <h4>Carrinho de Compras</h4>
+        <div id="cartItems">
+            <!-- Os itens do carrinho serão carregados dinamicamente aqui -->
+        </div>
+        <div class="cart-total">
+            Subtotal: R$ <span id="cartSubtotal">0.00</span><br>
+            
+            <!-- Campo para o usuário inserir o CEP -->
+            CEP: <input type="text" id="cepInput" placeholder="Digite seu CEP" oninput="calcularFrete()"><br>
+
+            <!-- Adicionando opções de envio com radio buttons -->
+            <h5>Escolha o tipo de envio:</h5>
+            <input type="radio" id="correios" name="tipoFrete" value="correios" checked onchange="calcularFrete()">
+            <label for="correios">Correios (+R$ 5,00)</label><br>
+
+            <input type="radio" id="sedex" name="tipoFrete" value="sedex" onchange="calcularFrete()">
+            <label for="sedex">Sedex (+R$ 10,00)</label><br>
+
+            <input type="radio" id="fedex" name="tipoFrete" value="fedex" onchange="calcularFrete()">
+            <label for="fedex">Fedex (+R$ 15,00)</label><br>
+
+            <!-- Exibição do valor do frete e do total -->
+            Frete: R$ <span id="freteValue">0.00</span><br>
+            Total: R$ <span id="cartTotal">0.00</span>
+        </div>
+
+        <button id="btnFinalizarCompra" class="btn btn-primary mt-3" onclick="finalizarCompra()">Finalizar Compra</button>  
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./codigo_fonte/JS/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+</html>
