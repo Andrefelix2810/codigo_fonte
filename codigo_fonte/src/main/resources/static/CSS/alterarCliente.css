@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    padding: 20px; /* Para evitar que ultrapasse a tela em dispositivos menores */
+}
+
+#form-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 900px; /* Tamanho máximo para o formulário */
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+label {
+    display: block;
+    color: #555;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left; /* Deixa os labels alinhados à esquerda */
+}
+
+input[type="text"],
+input[type="date"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+span {
+    display: block;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: left;
+}
+
+button[type="button"],
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #333;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button[type="button"]:hover,
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+#enderecos-entrega {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

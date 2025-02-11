@@ -21,7 +21,9 @@ public class ClienteController {
     @Autowired
     private ClienteService clienteService;
 
-    @PostMapping
+
+    //Recebe uma requisição POST no endpoint /cliente com o corpo (JSON) contendo os dados do cliente. Esses dados são mapeados para o objeto Cliente automaticamente pelo Spring, graças à anotação @RequestBody.
+    @PostMapping 
     public ResponseEntity<?> cadastrarCliente(@RequestBody Cliente cliente) {
         try {
             clienteService.cadastrarCliente(cliente);

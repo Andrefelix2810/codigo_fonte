@@ -1,7 +1,7 @@
-document.getElementById('cep').addEventListener('blur', function() {
-    const cep = this.value.replace(/\D/g, '');
-    if (cep.length === 8) {
-        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+document.getElementById('cep').addEventListener('blur', function() { //preenche automaticamente quando sai do campo
+    const cep = this.value.replace(/\D/g, ''); //remove caracteres não numéricos
+    if (cep.length === 8) { // verifica se o CEP tem 8 dígitos
+        fetch(`https://viacep.com.br/ws/${cep}/json/`) // Faz uma requisição HTTP para a API, buscando os dados do CEP.
             .then(response => response.json())
             .then(data => {
                 if (!data.erro) {
@@ -19,10 +19,10 @@ document.getElementById('cep').addEventListener('blur', function() {
     }
 });
 
-document.getElementById('cadastroClienteForm').addEventListener('submit', function(event) {
+document.getElementById('cadastroClienteForm').addEventListener('submit', function(event) { //envia os dados para o servidor,  que é ativado quando salva o formulario com o id cadastroClienteForm
     event.preventDefault();
     const form = event.target;
-    const cliente = {
+    const cliente = { //coleta os dados do formulario
         nome: form.nome.value,
         email: form.email.value,
         cpf: form.cpf.value,
@@ -30,7 +30,7 @@ document.getElementById('cadastroClienteForm').addEventListener('submit', functi
         genero: form.genero.value,
         senha: form.senha.value,
         cep: form.cep.value,
-        logradouro: form.logradouro.value,
+        logradouro: form.logradouro.value, 
         numero: form.numero.value,
         complemento: form.complemento.value,
         bairro: form.bairro.value,
@@ -40,10 +40,10 @@ document.getElementById('cadastroClienteForm').addEventListener('submit', functi
         enderecoEntrega: form.enderecoEntrega.checked
     };
 
-    fetch("http://localhost:8080/cliente", {
-        method: "POST",
-        body: JSON.stringify(cliente),
-        headers: {
+    fetch("http://localhost:8080/cliente", { //envia os dados para o servidor
+        method: "POST", //Faz uma requisição POST para a URL do servidor.
+        body: JSON.stringify(cliente), //Os dados são enviados no corpo da requisição, convertidos para JSON.
+        headers: { //O cabeçalho da requisição é configurado para indicar que o conteúdo é JSON.
             "Content-Type": "application/json",
         },
     })
